@@ -1,0 +1,25 @@
+# Fundamentals of Ethernet LANs
+
+- LANs typically connect nearby devices: devices in the same room, in the same building, or in a campus of buildings. In contrast, WANs connect devices that are typically relaively far apart.
+- Many types of LANs have existed over the years, but today's networks use two general types of LANs: Ethernet LANs and Wireless LANs. Ethernet LANs are often called wired LANs. Wireless LANs do not use wires or cables, instead using radio waves for the links between nodes.
+- The term _Ethernet_ refers to a family of LAN standards that together define the physical and data-link layers of the world's most popular wired LAN technology.
+- First, the LAN needs a device called the Ethernet LAN switch, which provids many physical ports into which cables can be connected. An Ethernet uses _Ethernet Cables_, which is a general reference to any cable that conforms to any of several Ethernet standards.
+- Most wireless LANs rely on yet another networking device: a wireless LAN access point. The AP acts somewhat like Ethernet switch, in that all wireless LAN nodes commuicate with the wireless AP.
+- The term _Ethernet_ refers to an entire family of standards. Some standards define the specifics of how to send data over a particular type of cabling, and at particular speed. Other standards define protocols or rules, that the ethernet nodes must follow to be a part of an Ethernet LAN. All these standards come from the IEEE and include the number **802.3** as the beginning of the standard name.
+- The most fundamental cabling choice has to do with the materials used inside the cable for the physical transmission of bits: copper wires or glass fibers. Devices using UTP cabling transmit data over electrical circuits via the copper wires inside the cable. Fiber-optica cabling, the more expensive alternative, allows Ethernet nodes to send light over glass fibers in the center of the cable.
+- [Types of Ethernet](https://postimg.cc/rDj5prN0)
+- The IEEE also uses more meaningful shortcut names to identify the speed as well as a clue about whether the cabling is UTP (suffix T) or fiber (suffix X).
+- Although Ethernet includes many physical layer standards, Ethernet acts like a single LAN technology because it uses the same data-link layer standard over all types of Ethernet physical links.
+- While the physical layer standards focus on sending bits over a cable, the Ethernet data-link protocols focus on sending an _Ethernet frame_ from source to destination Ethernet node.
+- Note that in an actual UTP cable, the wires will be twisted together, instead of being paralle. The twising helps solve some important physical transmission issues. When electrical current passes over any wire, it creates electromagnetic interference (EMI) that interferes with the electrica signals in nearby wires, including the wires in the same cable. Twisting the wire pair together helps cancel out most of the EMI, so most networking physical links that use copper wires use twisted pairs.
+- The term _Ethernet link_ refers to any physical cable between two Ethernet nodes. First, think about the UTP cable itself. The cable holds some copper wires, grouped as twisted pairs. The 10BASE-T and 100BASE-T standards require two pairs of wires, while the 1000BASE-T standard require four pairs.
+- Many Ethernet UTP cables use an RJ-45 connecter on the both ends. The RJ-45 connecter has eight physical locations into which the eight wires in the cable can be inserted, called _pin positions_. These pis create a place where the ends of the copper wires can touch the electronics inside the nodes at the end of the physical link so that electricity can flow.
+- 10BASE-T and 100BASE-T use two pairs of wires in the UTP cable, one for each direction. For correct transmission over the link, the wires in the UTP cable must be connected to the correct pin positions in the RJ-45 connectors.
+- As a rule, Ethernet NIC transmitters use the pair connected to 1 and 2; the NIC recieves use pairs at pin positions 3 and 6. LAN switches do the opposite. Their receivers use the wire pair at pins 1 and 2, and their transmitters use the wire pair at pins 3 and 6.
+- To allow a PC NIC, to communicate with a switch, the UTP cable must use a _straight through cable pinout_. [straight-through-cable-pinout](https://postimg.cc/2bCc6KyQ)
+- A straight throught cable works correctly when the nodes use opposite pairs for transmitting data. However, when two like devices connect to an Ethernet link, they both transmit on the same pins. In that case, you then need another type of cabling pinout called _crossover cable_. The crossover cable pinout crosses the pair at the transmit pins on each device to the receive pins on the opposite device. [crossover-cable-pinout](https://postimg.cc/w3QVM2Y2)
+- logic:
+    - **Crossover cable:** if the endpoints transmit on the same pair.
+    - **Straight-through cable:** if the endpoints transmit on different pin pairs.
+- [Summary](https://postimg.cc/f3SCbhMS)
+- 
