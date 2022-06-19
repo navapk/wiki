@@ -1,6 +1,6 @@
 # My personal WiKi
 
-## cisco stuff
+## Networking stuff
     * [[ccna/index.md|CCNA Prep]]
 
 ## offtopic
